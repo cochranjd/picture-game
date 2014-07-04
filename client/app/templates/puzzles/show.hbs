@@ -1,0 +1,14 @@
+<div class="puzzle">
+    <img {{bind-attr src="model.puzzle_image_path"}} class="bg">
+
+    {{#each controller.tiles}}
+        {{view "blocker" col=this.col row=this.row}}
+    {{/each}}
+</div>
+
+<div class="puzzle-controls">
+    {{#link-to "index" class="btn btn-primary"}}Back To Puzzle Index{{/link-to}}
+    <button class="btn btn-primary" {{action "reveal" bubbles="false"}}>Show Puzzle</button>
+    <button class="btn btn-primary" {{action "reset" bubbles="false"}}>Cover Puzzle</button>
+    <button class="btn btn-primary" {{action "random" bubbles="false"}}>Random</button>
+</div>

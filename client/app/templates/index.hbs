@@ -1,0 +1,7 @@
+<div style="padding: 50px;">
+    <ul class="list-unstyled">
+        {{#each controller}}
+            <li style="margin-top: 10px;">{{#link-to "puzzles.show" this class="btn btn-primary"}}PLAY{{/link-to}} {{title}} </li>
+        {{/each}}
+    </ul>
+</div>

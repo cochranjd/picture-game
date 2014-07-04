@@ -1,5 +1,4 @@
 .env
-/client
 set-env.sh
 *.rbc
 .rspec
