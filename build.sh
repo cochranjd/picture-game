@@ -24,14 +24,14 @@ function boldMessage {
 #echo -e "${color}Building Ember app${reset}"
 boldMessage 4 "Building Ember app"
 cd client
-# ember build --environment production
+#ember build --environment production
 ember build
 cd ../
 
 rm -rf public/ember-assets
 
 printMessage 4 "Copying ember build files to rails"
-cp -r client/dist/ public/
+cp -r client/dist/* public/
 
 printMessage 4 "Swaping assets dir for ember-assets"
 mv public/assets public/ember-assets
