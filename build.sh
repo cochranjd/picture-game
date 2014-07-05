@@ -36,13 +36,13 @@ printMessage 4 "Swaping assets dir for ember-assets"
 mv public/assets public/ember-assets
 
 printMessage 4 "Replacing references s/assets/ember-assets/ in public/index.html"
-sed -i .bck s/assets/ember-assets/ public/index.html
+sed -i s/assets/ember-assets/ public/index.html
 
 printMessage 4 "inserting csrf_meta_tags in head"
-sed -i .bck 's/<\/head>/<%= csrf_meta_tags %>&/' public/index.html
+sed -i 's/<\/head>/<%= csrf_meta_tags %>&/' public/index.html
 
 printMessage 4 "inserting yield in body"
-sed -i .bck 's/<body>/&<%= yield %>/' public/index.html
+sed -i 's/<body>/&<%= yield %>/' public/index.html
 
 printMessage 4 "Replacing application.html.erb with index.html"
 mv public/index.html app/views/application/index.html.erb
