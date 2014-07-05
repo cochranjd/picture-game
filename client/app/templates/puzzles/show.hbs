@@ -1,10 +1,8 @@
-<div class="puzzle">
-    <img {{bind-attr src="model.puzzle_image_path"}} class="bg">
-
+{{#puzzle-image class="puzzle" imageUrlBinding="model.puzzle_image_path"}}
     {{#each controller.tiles}}
         {{view "blocker" col=this.col row=this.row}}
     {{/each}}
-</div>
+{{/puzzle-image}}
 
 <div class="puzzle-controls">
     {{#link-to "index" class="btn btn-primary"}}Back To Puzzle Index{{/link-to}}

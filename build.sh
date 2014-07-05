@@ -24,8 +24,7 @@ function boldMessage {
 #echo -e "${color}Building Ember app${reset}"
 boldMessage 4 "Building Ember app"
 cd client
-#ember build --environment production
-ember build
+ember build --environment production
 cd ../
 
 rm -rf public/ember-assets
